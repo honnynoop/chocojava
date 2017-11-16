@@ -1,0 +1,23 @@
+01: package kr.co.infopub.chapter.s020;
+02: // (위도, 경도)를 한 묶음으로 객체에 저장
+03: public class GeoPoint {
+04: 	public static void main(String[] args) {
+05: 		// 실수 변수
+06: 		double latitude1=37.52127220511242;
+07: 		double longitude1=127.0074462890625;   // 서울
+08: 		double latitude2=35.137879119634185;
+09: 		double longitude2=129.04541015625;     // 부산
+10: 		// (위도, 경도) 객체
+11: 		Geo geo1=new Geo();
+12: 		geo1.latitude=latitude1;
+13: 		geo1.longitude=longitude1;
+14: 		System.out.println(geo1.latitude+"\t"+geo1.longitude );
+15: 		
+16: 		Geo geo2=new Geo();
+17: 		geo2.latitude=latitude2;
+18: 		geo2.longitude=longitude2;
+19: 		// 객체 전달
+20: 		Geo geo=geo1;
+21: 		System.out.println(geo.latitude+"\t"+geo.longitude );
+22: 	}
+23: }

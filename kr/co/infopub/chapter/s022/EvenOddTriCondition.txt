@@ -1,0 +1,9 @@
+1: package kr.co.infopub.chapter.s022;
+2: // 삼항(?:)연산자 
+3: public class EvenOddTriCondition {
+4: 	public static void main(String[] args) {
+5: 		int temp=99;
+6: 		temp = (temp%2==1) ? temp*3+1 : temp/2;
+7: 		System.out.printf("계산 후=%d\n",temp);
+8: 	}
+9: }

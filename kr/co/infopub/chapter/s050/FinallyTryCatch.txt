@@ -1,0 +1,16 @@
+01: package kr.co.infopub.chapter.s050;
+02: public class FinallyTryCatch {
+03: 	public static void main(String[] args) {
+04: 		try {
+05: 			// Divide by zero.
+06: 			int x = 5;
+07: 			int y = 20 / (5 - x);   //여기서 예외를 던진다.
+08: 			System.out.println(y);
+09: 		} catch (ArithmeticException e) {//run time
+10: 		   System.out.println("==> 0으로 나눴나 확인해 봐!!!!");
+11: 		   //e.printStackTrace();
+12: 		}finally{
+13: 			System.out.println("난 수행되어야 만 해!!!!");
+14: 		}
+15: 	}
+16: }

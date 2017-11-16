@@ -1,0 +1,28 @@
+01: package kr.co.infopub.chapter.s056;
+02: public class StringBufferMain {
+03: 	public static void main(String[] args) {
+04: 		// StringBuffer 생성
+05: 		StringBuffer sb1=new StringBuffer();
+06: 		//1 계속 붙이는 함수 mutable 
+07: 		sb1.append("안녕하세요.")
+08: 		  .append("또 만나요.")
+09: 		  .append("모두를 사랑해요. 기다려봐.");
+10: 		System.out.println(sb1.toString()+sb1.hashCode());
+11: 		//2 replace
+12: 		sb1.replace(0,2,"나 보기가 역거워");
+13: 		System.out.println(sb1.toString()+sb1.hashCode());
+14: 		//3 reverse
+15: 		sb1.reverse();
+16: 		System.out.println(sb1.toString());
+17: 		//4 delete
+18: 		sb1.delete(10,15);
+19: 		System.out.println(sb1.toString());
+20: 		//5 cal by reference, shallow copy
+21: 		replaces(sb1);
+22: 		System.out.println(sb1.toString());
+23: 	}
+24: 	public static void replaces(StringBuffer sb){
+25: 		sb.reverse();
+26: 		sb.replace(0,3,"GoGo");//0부터 2까지 를 GoGo로
+27: 	}
+28: }

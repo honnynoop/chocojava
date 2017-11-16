@@ -1,0 +1,15 @@
+01: package kr.co.infopub.chapter.s034;
+02: // random
+03: public class BioRandom {
+04: 	public static void main(String[] args) {
+05: 		int range=10;
+06: 		int start=1;
+07: 		int a=0, b=0, c=0;
+08: 		while(a==b || b==c || c==a){
+09: 			a=(int)(range*Math.random()+start);
+10: 			b=(int)(range*Math.random()+start);
+11: 			c=(int)(range*Math.random()+start);
+12: 		}
+13:         System.out.printf("%d\t%d\t%d",a,b,c);
+14: 	}
+15: }

@@ -1,0 +1,15 @@
+01: package kr.co.infopub.chapter.s014;
+02: // 연산  % * /
+03: public class BioCalendar {
+04: 	// 상수, 상수값은 변경할 수 없다.
+05: 	public static final int PHYSICAL = 23;     // 상수(개발자 정의)
+06: 	public static void main(String[] args) {
+07: 		System.out.println(PHYSICAL);   
+08: 		int index=PHYSICAL;                  // 상수값을 변수에 대입
+09: 		int days=1200;   
+10: 		// Math.PI 3.14에서 정의된어 있는 상수
+11: 		double vals=(days % index) * 2 * Math.PI / index ;
+12: 		System.out.println(vals +"라디안");
+13: 		System.out.println( Math.toDegrees(vals) +"도");
+14: 	}
+15: }

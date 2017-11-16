@@ -1,0 +1,18 @@
+01: package kr.co.infopub.chapter.s049;
+02: public class  FormatTryCatch{
+03: 	public static void main(String[] args) {	
+04: 		String sNum="123";
+05: 		String nNum="h";
+06: 		try{
+07: 			int a=Integer.parseInt(sNum);
+08: 			System.out.println(a);
+09: 		}catch(NumberFormatException ee){
+10: 			System.out.println("int인지 확인해 봐!!!!");
+11: 			System.err.println(ee.getMessage());
+12: 		}catch(Exception ee){
+13: 			System.out.println("야 잘 좀 넣어");
+14: 		}finally{
+15: 			System.out.println("난 수행되어야 만 해!!!!");
+16: 		}
+17: 	}
+18: }

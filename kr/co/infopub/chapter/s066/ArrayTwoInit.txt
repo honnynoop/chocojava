@@ -1,0 +1,40 @@
+01: package kr.co.infopub.chapter.s066;
+02: public class ArrayTwoInit {
+03: 	public static void main(String[] args) {
+04: 		System.out.println("// 2차원 배열 방법 1");
+05: 		int [][] a=new int[4][3];//4X3
+06: 		a[0][0]=1;//0부터 시작
+07: 		a[0][1]=2;
+08: 		println(a);
+09: 		
+10: 		System.out.println("// 2차원 배열 방법 2 (JigJagged도 가능)");
+11: 		int [][] b=new int[3][];//3X?    파스칼의 삼각형
+12: 		b[0]=new int[4]; 
+13: 		b[1]=new int[5];
+14: 		b[2]=new int[6];
+15: 		println(b);
+16: 		
+17: 		System.out.println("// 2차원 배열 방법 3");
+18: 		int [][]c=new int[][]{{1,2,3,4,5},{2,3,4,5,6},{6,7,8,9,0}};
+19: 		println(c);
+20: 		
+21: 		System.out.println("// 2차원 배열 방법 4");
+22: 		int [][]g={{1,2,3,4,5},{2,3,4,5,6},{6,7,8,9,0}};
+23: 		println(g);
+24: 		
+25: 		System.out.println("copy 1");
+26: 		int [][]d=new int[c.length][c[0].length];//3X5
+27: 		for(int i=0;i<c.length;i++){//deep copy
+28: 			System.arraycopy(c[i],0,d[i],0,d[i].length);
+29: 		}
+30: 		println(d);
+31: 	}
+32: 	public static void println(int [][] p){
+33: 		for(int i=0;i<p.length;i++){
+34: 			for(int j=0;j<p[i].length;j++){
+35: 				System.out.print("["+p[i][j]+"] ");
+36: 			}
+37: 			System.out.println();
+38: 		}
+39: 	}
+40: }

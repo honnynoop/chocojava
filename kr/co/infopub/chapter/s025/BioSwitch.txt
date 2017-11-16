@@ -1,0 +1,27 @@
+01: package kr.co.infopub.chapter.s025;
+02: // enum, switch case
+03: public class BioSwitch {
+04: 	// 메서드 선언
+05: 	public static String textInfor(PEI index, double value) {
+06: 		String result = "";
+07: 		switch( index ) {
+08: 			case PHYSICAL : result = "신체지수: " ;break;
+09: 			case EMOTIONAL : result = "감정지수: "; break;
+10: 			case INTELLECTUAL : result = "지성지수: "; break;
+11: 			default : result = "미결정: "; break;
+12: 		}
+13: 		return result + (value*100);
+14: 	}
+15: 	public static void main(String[] args) {
+16: 		PEI index=PEI.PHYSICAL;
+17: 		double value=0.86;
+18: 		System.out.println("신체지수 주기값: "+index.getPei());  //enum을 int로 변환 
+19: 		String st=textInfor( index,  value) ;
+20: 		System.out.println(st);
+21: 		System.out.println(index.ordinal());
+22: 		System.out.println(index.name());
+23: 		System.out.println(index);
+24: 		System.out.println(index.getPei());
+25: 	}
+26: 	
+27: }

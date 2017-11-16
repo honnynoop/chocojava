@@ -1,0 +1,16 @@
+01: package kr.co.infopub.chapter.s016;
+02: // static 메서드
+03: public class BioCalendar {
+04: 	// 상수, 상수값은 변경할 수 없다.
+05: 	public static final int PHYSICAL = 23;     // 상수(개발자 정의)
+06: 	// static 메서드 선언
+07: 	public static double getBioRhythm(long days, int index ,int max) {
+08: 		return max*Math.sin( (days % index) * 2 * Math.PI / index );
+09: 	}
+10: 	public static void main(String[] args) {
+11: 		int days=1200;     
+12: 		// 메서드 호출 
+13: 		double phyval=getBioRhythm( days,  PHYSICAL,     100);
+14: 		System.out.printf("나의 신체지수 %1$.2f입니다.\n",phyval);
+15: 	}
+16: }

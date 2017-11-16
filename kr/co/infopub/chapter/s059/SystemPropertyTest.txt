@@ -1,0 +1,23 @@
+01: package kr.co.infopub.chapter.s059;
+02: import java.util.Iterator;
+03: import java.util.Map;
+04: public class SystemPropertyTest {
+05: 	public static void main(String[] args) {
+06: 		long namotime=System.nanoTime();
+07: 		for(int i=0;i<100000;i++){
+08: 			System.out.print("");
+09: 		}
+10: 		long namotime2=System.nanoTime();//10^-9 nano java5추가
+11: 		System.out.println((namotime2-namotime));//1/1000000000초			
+12: 		System.out.println(System.getenv("JAVA_HOME")); // 환경변수
+13: 		//모든 env구하기
+14: 		Map<String, String> map=System.getenv();  // 환경변수
+15: 		Iterator<String> iter= map.keySet().iterator(); // Map에서 키얻기
+16: 		int j=0;
+17: 		while(iter.hasNext()){
+18: 			String keys=iter.next();
+19: 			System.out.println((++j+" ")+keys+" : "+map.get(keys));
+20: 		}
+21: 	}//main
+22: }
+23: 

@@ -1,0 +1,4 @@
+1: package kr.co.infopub.chapter.s018;
+2: public enum FRUIT{
+3: 	APPLE, BANANA, MANGO
+4: }

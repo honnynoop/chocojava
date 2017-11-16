@@ -1,0 +1,18 @@
+01: package kr.co.infopub.chapter.s042;
+02: public class ForeachLotto {
+03: 	// var args variable argument
+04: 	public static void print(int ... mm){
+05: 		for (int m : mm) {
+06: 			System.out.printf(m+"\t");
+07: 		}
+08: 		System.out.println();
+09: 	}
+10: 	public static void main(String[] args) {
+11: 		int[]mm={1,6,16,22,23,33};
+12: 		print(mm);             // 배열도 되고
+13: 		int a=1,b=6,c=16;      
+14: 		print(a);              // 1개 짜리도 되고
+15: 		print(a,b);            // 2개 짜리도 되고
+16: 		print(a,b,c);          // 3개 짜리도 되고
+17: 	}
+18: }

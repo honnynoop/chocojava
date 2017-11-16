@@ -1,0 +1,24 @@
+01: package kr.co.infopub.chapter.s047;
+02: import java.util.ArrayList;
+03: import java.util.List;
+04: import java.util.stream.Collectors;
+05: // stream list filter map reduce
+06: public class ForRambdaCondition {
+07: 	public static void main(String[] args) {
+08: 		List<Integer> ilist=new ArrayList<>();
+09: 		int s=0;
+10: 		for (int i = 1; i <= 10; i++) {
+11: 			ilist.add(i);
+12: 		}
+13: 		// stream filter map collect
+14: 		ilist=ilist.stream()
+15: 				   .filter(i-> i%2==1)
+16: 				   .map(i -> i*i)
+17: 				   .collect(Collectors.toList());
+18: 		ilist.forEach(i->{System.out.printf(i+"\t");});
+19: 		System.out.println();
+20: 		//stream reduce 
+21: 		s=ilist.stream().reduce(0, Integer::sum);
+22: 		System.out.println("1~10사이의 홀수에 대한 제곱합: "+s);
+23: 	}
+24: }

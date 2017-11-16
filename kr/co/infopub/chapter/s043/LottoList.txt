@@ -1,0 +1,19 @@
+01: package kr.co.infopub.chapter.s043;
+02: import java.util.ArrayList;
+03: import java.util.List;
+04: // 배열보다 변한 List
+05: public class LottoList {
+06: 	public static void main(String[] args) {
+07: 		List<Integer> ilist=new ArrayList<>();
+08: 		// 넣기
+09: 		for (int i = 1; i <= 10; i++) {
+10: 			ilist.add(i);
+11: 		}
+12: 		// 가져오기
+13: 		for(int i=0; i< ilist.size() ;i++){
+14: 			int m=ilist.get(i);
+15: 			System.out.printf("%d\t",m);
+16: 		}
+17: 		System.out.println();
+18: 	}
+19: }

@@ -1,0 +1,20 @@
+01: package kr.co.infopub.chapter.s012;
+02: import java.util.Scanner;
+03: // 입력, 출력
+04: public class InOutMethod {
+05: 	public static void main(String[] args) {
+06: 		Scanner scann=new Scanner(System.in); //키보드
+07: 		
+08: 		System.out.println("정수를 입력하세요.");
+09: 		int choice=scann.nextInt();     //키보드로 정수 입력
+10: 		System.out.println(choice);
+11: 		
+12: 		System.out.println("실수를 입력하세요.");
+13: 		double rchoice=scann.nextDouble();
+14: 		System.out.println(rchoice);
+15: 		
+16: 		System.out.println("문자열을 입력하세요.");
+17: 		String schoice=scann.next();
+18: 		System.out.println(schoice);
+19: 	}
+20: }

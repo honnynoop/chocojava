@@ -1,0 +1,19 @@
+01: package kr.co.infopub.chapter.s030;
+02: // while
+03: public class EvenOdd {
+04: 	public static void showOddnEvenw(int n){
+05: 		int temp=n;
+06: 		while(temp!=1){
+07: 			if(temp%2==1){       // È¦¼ö 
+08: 				temp=temp*3+1;
+09: 			}else{               // Â¦¼ö 
+10: 				temp/=2;
+11: 			}
+12: 			System.out.print("["+temp+"] ");
+13: 		}
+14: 		System.out.println("\n---------------------");
+15: 	}
+16: 	public static void main(String[] args) {
+17: 		showOddnEvenw(122);
+18: 	}
+19: }

@@ -1,0 +1,15 @@
+01: package kr.co.infopub.chapter.s044;
+02: import java.util.Arrays;
+03: import java.util.List;
+04: import java.util.function.Consumer;
+05: public class ForeachRambdaLotto {
+06: 	public static void main(String[] args) {
+07: 		List<Integer> mmlists=Arrays.asList(1,6,16,22,23,33);
+08: 		mmlists.forEach(
+09: 				m -> { System.out.printf(m+"\t"); } 
+10: 		);
+11: 		System.out.println();
+12: 		Consumer<Integer> consume = (Integer m) -> {System.out.printf(m+"\t");};
+13: 		mmlists.forEach(consume);
+14: 	}
+15: }

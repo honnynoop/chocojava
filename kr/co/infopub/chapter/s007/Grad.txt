@@ -1,0 +1,13 @@
+01: package kr.co.infopub.chapter.s007;
+02: // 정수 변수, 연산
+03: public class Grad {
+04: 	public static void main(String[] args) {
+05: 		int kor=90;
+06: 		int eng=80;
+07: 		int math=89;
+08: 		int tot=kor+eng+math;
+09: 		int average=tot/3;              // 정수연산은 정수
+10: 		System.out.printf("국어 %d점, 영어 %d점, 수학 %d점 =>\t",kor,eng,math);
+11: 		System.out.printf("총점 %d점, 평균 %d점\n",tot,average);
+12: 	}
+13: }

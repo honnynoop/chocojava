@@ -1,0 +1,28 @@
+01: package kr.co.infopub.chapter.s067;
+02: import java.util.ArrayList;
+03: // Boxing/Unboxing
+04: public class  EasyBoxingMain{
+05: 	public static void main(String[] args) {
+06: 		int intNm1=123;
+07: 		long longNum1=345L;
+08: 		double doubleNum=123.123;
+09: 		Integer intWrap1=intNm1;       //new Integer(intNm1);
+10: 		Long    longWrap1=longNum1;    //new Long(longNum1);
+11: 		Double  doubleWrap1=doubleNum; //new Double(longNum1);
+12: 		double dd=doubleWrap1;
+13: 		// 기본타입 <--> Wrapper는 캐스팅없이 사용
+14: 		Integer intWrap2=intNm1;  // Boxing
+15: 		intNm1=intWrap2;          // UnBoxing
+16: 		System.out.println(intNm1);
+17: 		
+18: 		ArrayList<Integer> ilists=new ArrayList<>();
+19: 		ilists.add(new Integer(3));
+20: 		ilists.add(5);
+21: 		int a=ilists.get(0);  // <Integer>
+22: 		System.out.println(a);
+23: 		
+24: 		int b=Integer.parseInt("123");
+25: 		System.out.println(b);
+26: 	}
+27: }
+28:  

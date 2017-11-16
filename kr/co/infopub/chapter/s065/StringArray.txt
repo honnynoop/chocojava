@@ -1,0 +1,20 @@
+01: package kr.co.infopub.chapter.s065;
+02: public class StringArray {
+03:  public static void main(String[] args) {
+04: 	String[] myNum = new String[ ]{"2016-08-17", "2016-09-17", "2016-03-17"};
+05: 	String[] myNum2 = {"2016-08-17", "2016-09-17", "2016-03-17"};
+06: 	System.out.println(myNum2[0]);
+07: 	print(myNum);
+08: 	//myNum2={"2016-08-17", "2016-09-17", "2016-03-17","2016-04-17"}; // 다시 초기화 불가
+09: 	myNum = new String[ ]{"2016-08-17", "2016-09-17", "2016-03-17","2016-04-17"};
+10: 	String[] tos=new String[myNum.length];
+11: 	System.arraycopy(myNum, 0, tos, 0, myNum.length);
+12: 	print(tos);
+13:  }
+14:  public static void print(String [] tos){
+15: 	for (String ss: tos) {
+16: 		System.out.printf(ss+"\t");
+17: 	}
+18: 	System.out.println();
+19:  }
+20: }

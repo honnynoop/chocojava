@@ -1,0 +1,13 @@
+01: package kr.co.infopub.chapter.s006;
+02: // 코멘트 - 프로그래밍에는 영향이 없고 설명을 위한 표시
+03: public class JavaComment {
+04: 	public static void main(String[] args) {
+05: 		/*
+06: 		0.0<= 실수값 <10.0을 (int)하면 정수만 반환한다. 
+07: 		그래서 0~9 사이의 임의 정수를 반환한다.
+08: 		*/
+09: 		int makeOne=(int)(Math.random()*10);   
+10: 		// 0~9 사이의 임의 정수
+11: 		System.out.println(makeOne);
+12: 	}
+13: }

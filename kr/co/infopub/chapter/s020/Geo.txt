@@ -1,0 +1,6 @@
+1: package kr.co.infopub.chapter.s020;
+2: // (위도,경도)를 저장하는 클래스
+3: public class Geo {
+4: 	public double latitude;      
+5: 	public double longitude;   
+6: }

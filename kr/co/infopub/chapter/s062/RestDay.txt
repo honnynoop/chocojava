@@ -1,0 +1,91 @@
+01: package kr.co.infopub.chapter.s062;
+02: import java.text.ParseException;
+03: import java.text.SimpleDateFormat;
+04: import java.util.Calendar;
+05: import java.util.Date;
+06: import java.util.TimeZone;
+07: public class RestDay {
+08:  public static void main(String[] args) {
+09: 	String st="2017-06-13";
+10: 	Calendar d2=todate(st);
+11: 	System.out.println(toYMD(d2));
+12: 	String st2=goGo(st,-7);
+13: 	System.out.println(st2);
+14: 	Calendar d3=todate(st2);
+15: 	System.out.println(toYMD(d3));
+16: 	
+17: 	TimeZone tz=TimeZone.getDefault();     // Asia/Seoul 현재 컴퓨터의 시간존 
+18: 	Calendar cal=Calendar.getInstance(tz); // 시간존에 대한 오늘
+19: 	System.out.println(toYMD2(cal));
+20: 	
+21: 	// America/New_York,  		
+22: 	TimeZone tzNY = TimeZone.getTimeZone("America/New_York");
+23: 	Calendar calNY=Calendar.getInstance(tzNY);
+24: 	System.out.println(toYMD2(calNY));
+25:  }
+26:  public static Calendar todate(String ss){
+27: 	SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+28: 	Date dd=new Date();
+29: 	try {
+30: 		dd=sdf.parse(ss);
+31: 	} catch (ParseException e) {
+32: 	}
+33: 	Calendar cal=Calendar.getInstance();
+34: 	cal.setTime(dd);
+35: 	return cal;
+36:  }
+37:  public static String toYMD(Calendar dd){
+38: 	SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+39: 	return sdf.format(dd.getTime());
+40:  }
+41:  public static String toYMD2(Calendar dd){
+42: 	SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+43: 	return sdf.format(dd.getTime());
+44:  }
+45:  public static String goGo(String ss,int day){
+46: 	Calendar cal=todate(ss);
+47: 	//-7일을 더하면 일주전
+48: 	cal.add(Calendar.DAY_OF_YEAR, day);
+49: 	//칼렌더를 문자열로 
+50: 	SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+51: 	return sdf.format(cal.getTime());
+52:  }
+53: // 휴일 구하기 113, 13일의 금요일 115, 파일 118, 빌보드 79
+54: public static boolean isRest(String day){
+55: 	//토, 일만 쉬도록 
+56: 	boolean isRest=false;
+57: 	Calendar tod= todate(day);
+58: 	if(tod.get(Calendar.DAY_OF_WEEK)==Calendar.SATURDAY || 
+59: 			tod.get(Calendar.DAY_OF_WEEK)==Calendar.SUNDAY ){ //토요일 또는 일요일
+60: 		isRest=true;
+61: 	}
+62: 	return isRest;
+63: }
+64: public static String toWantedDay(String ss,int round){
+65: 	Calendar cal=todate(ss);
+66: 	//-7일을 더하면 일주전
+67: 	cal.add(Calendar.DAY_OF_YEAR, -(round*7));
+68: 	//칼렌더를 문자열로 
+69: 	SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+70: 	return sdf.format(cal.getTime());
+71: }
+72: 
+73: public static String toDay(String rs){  // 8월 16, 2017
+74: 	SimpleDateFormat sdfDesired = new SimpleDateFormat("MMMMM dd, yyyy");
+75: 	Calendar ts=todate(rs);
+76: 	String sss=sdfDesired.format(ts.getTime());
+77: 	return sss;
+78: }
+79: public static Date toDate(int year, int month, int day){
+80: 	return toCalendar(year,month,day).getTime();
+81: }
+82: public static Calendar toCalendar(int year, int month, int day){
+83: 	Calendar cal=Calendar.getInstance();
+84: 	cal.set(year, month-1, day);
+85: 	return cal;
+86: }
+87: public static String toStrDate(Date dd){
+88: 	SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
+89: 	return sdf.format(dd);
+90: }
+91: }

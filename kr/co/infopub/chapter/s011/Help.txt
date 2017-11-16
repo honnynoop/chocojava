@@ -1,0 +1,14 @@
+01: package kr.co.infopub.chapter.s011;
+02: // 메서드
+03: public class Help {
+04: 	// 메서드 선언
+05: 	public static void showHelp() {
+06: 		System.out.println("**********************************************");
+07: 		System.out.println("*        이 프로그래밍은 Java200이 만들었습니다.        *");
+08: 		System.out.println("**********************************************");
+09: 	}
+10: 	//메서드 호출
+11: 	public static void main(String[] args) {
+12: 		showHelp();        // '메서드이륾()'
+13: 	}
+14: }

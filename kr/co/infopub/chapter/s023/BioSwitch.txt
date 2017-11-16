@@ -1,0 +1,20 @@
+01: package kr.co.infopub.chapter.s023;
+02: // case
+03: public class BioSwitch {
+04: 	// 조건에 따라 신체, 감정, 지성값을 출력
+05: 	public static String textInfor(int index, double value) {
+06: 		String result = "";
+07: 		switch( index ) {
+08: 			case 23 : result = "신체지수: " ;break;
+09: 			case 28 : result = "감정지수: "; break;
+10: 			case 33 : result = "지성지수: "; break;
+11: 		}
+12: 		return result + (value*100);
+13: 	}
+14: 	public static void main(String[] args) {
+15: 		int index=23;          // 신체지수
+16: 		double value=0.86;
+17: 		String st=textInfor( index,  value) ;  //메서드 호출
+18: 		System.out.println(st);
+19: 	}
+20: }

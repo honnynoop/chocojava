@@ -1,0 +1,49 @@
+01: package kr.co.infopub.chapter.s063;
+02: public class UsingCharacterMain {
+03: 	public static void main(String[] args) {
+04: 		Character chr1=new Character('W');
+05: 		Character chr2=new Character('9');   //48+9
+06: 		
+07: 		if(Character.isLetter(chr1.charValue())){       
+08: 			System.out.print("1 : "+chr1.charValue());  // 'W'
+09: 		}
+10: 		System.out.print(" ");
+11: 		System.out.print('\u0057');System.out.print("\t");  // 16진수 유니코드
+12: 		System.out.println(Integer.toHexString((int)chr1)); // 'A'=65
+13: 		System.out.println((int)chr1);      // 87 -> 5*16+7 
+14: 		if(Character.isDigit(chr2.charValue())){
+15: 			System.out.println("2 : "+(int)chr2.charValue());  //'9'=48+9
+16: 		}
+17: 		
+18: 		System.out.println("3 : "+Character.getType('a'));//소문자 2
+19: 		System.out.println("4 : "+Character.getType('A'));//대문자 1
+20: 		System.out.println("5 : "+Character.getType('3'));//숫자 9
+21: 		System.out.println("6 : "+Character.getType('&'));//특수문자 24
+22: 		//OTHER_PUNCTUATION 24
+23: 		System.out.println("7 : "+Character.getType('\n'));//white 15
+24: 		System.out.println("8 : "+(int)'\b');//8
+25: 		//9~13 28~31 white space
+26: 		System.out.println("9 : "+(int)'\t');//9  //white space
+27: 		System.out.println("10: "+(int)'\n');//10 
+28: 		System.out.println("11: "+(int)'\f');//12
+29: 		System.out.println("12: "+(int)'\r');//13
+30: 		
+31: 		System.out.println("13: "+Character.getNumericValue('9'));//숫자
+32: 		System.out.println("14: "+Character.isWhitespace(' '));
+33: 		System.out.println("15: "+Character.isWhitespace('\n'));
+34: 		System.out.println("16: "+Character.isWhitespace('\r'));
+35: 		System.out.println("17: "+Character.isWhitespace('\b'));//false
+36: 		System.out.println("18: "+Character.isLetterOrDigit('9'));
+37: 		System.out.println("19: "+Character.isLowerCase('A'));
+38: 		System.out.println("20: "+Character.isUpperCase('A'));
+39: 		//radix  기수 0~9가 기본 
+40: 		System.out.println("21: "+Character.digit('8',9));
+41: 		//SPACE_SEPARATOR 12 '\f'
+42: 		//LINE_SEPARATOR  13 '\r'
+43: 		//PARAGRAPH_SEPARATOR 14	
+44: 		//SPACE   32	
+45: 		System.out.println("22: "+(int)' ');//32
+46: 		System.out.println("23: "+Character.isSpaceChar(' '));
+47: 		System.out.println("24: "+Character.isSpaceChar('\n'));
+48: 	}
+49: }

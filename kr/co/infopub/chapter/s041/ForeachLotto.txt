@@ -1,0 +1,11 @@
+01: package kr.co.infopub.chapter.s041;
+02: // 향상된 for와 배열
+03: public class ForeachLotto {
+04: 	public static void main(String[] args) {
+05: 		int[]mm={1,6,16,22,23,33};
+06: 		for (int m : mm) {
+07: 			System.out.printf(m+"\t");
+08: 		}
+09: 		System.out.println();
+10: 	}
+11: }

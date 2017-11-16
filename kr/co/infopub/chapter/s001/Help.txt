@@ -1,0 +1,9 @@
+1: package kr.co.infopub.chapter.s001;
+2: // 출력
+3: public class Help {
+4: 	public static void main(String[] args) {
+5: 		System.out.println("**********************************************");
+6: 		System.out.println("*        이 프로그래밍은 Java200이 만들었습니다.        *");
+7: 		System.out.println("**********************************************");
+8: 	}
+9: }

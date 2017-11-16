@@ -1,0 +1,23 @@
+01: package kr.co.infopub.chapter.s036;
+02: // Math 클래스 메서드 
+03: public class PrimMath {
+04: 	public static boolean isPrime(int n){
+05: 		boolean isS=true;
+06: 		for (int i = 2; i <=(int)Math.sqrt(n); i++) {
+07: 			if(n%i==0){
+08: 				isS=false;
+09: 				break;
+10: 			}
+11: 		}
+12: 		return isS;
+13: 	}
+14: 	public static void main(String[] args) {
+15: 		int number=1234567;
+16: 		boolean ifPrime=isPrime(number);   // 소수인가를 확인한다.
+17: 		if(ifPrime){
+18: 			System.out.printf("%는 1과 자신으로만 나눠떨어지는 소수다.",number);
+19: 		}else{
+20: 			System.out.printf("%d는 소수가 아니다.",number);
+21: 		}
+22: 	}
+23: }

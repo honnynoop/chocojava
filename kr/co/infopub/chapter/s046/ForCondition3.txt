@@ -1,0 +1,33 @@
+01: package kr.co.infopub.chapter.s046;
+02: import java.util.ArrayList;
+03: import java.util.List;
+04: import java.util.function.BinaryOperator;
+05: // stream
+06: public class ForCondition3 {
+07: 	public static void main(String[] args) {
+08: 		List<Integer> ilist=new ArrayList<>();
+09: 		int s=0;
+10: 		for (int i = 1; i <= 100; i++) {
+11: 			ilist.add(i);
+12: 		}
+13: 		// 초기값 0, 
+14: 		s=ilist.stream().reduce(0, Integer::sum);
+15: 		System.out.println("1~100의 합: "+s);
+16: 		s=0;  
+17: 		// 1~100사이의 홀수의 합
+18: 		s=ilist.stream().filter(i-> i%2==1).reduce(0, Integer::sum);
+19: 		System.out.println("1~100사이의 홀수의 합: "+s);
+20: 		// 1~100사이의 홀수의 합
+21: 		s=ilist.stream().filter(i-> i%2==1).reduce(0, (x,y)->x+y );
+22: 		System.out.println("1~100사이의 홀수의 합: "+s);
+23: 		// 1~100사이의 홀수의 합
+24: 		s=ilist.stream().filter(i-> i%2==1).reduce(0, 
+25: 				                new BinaryOperator<Integer>() {
+26: 			@Override
+27: 			public Integer apply(Integer t, Integer u) {
+28: 				return t+u;
+29: 			}
+30: 		});
+31: 		System.out.println("1~100사이의 홀수의 합: "+s);
+32: 	}
+33: }

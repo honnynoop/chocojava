@@ -1,0 +1,21 @@
+01: package kr.co.infopub.chapter.s045;
+02: import java.util.ArrayList;
+03: import java.util.List;
+04: // List
+05: public class ForCondition2 {
+06: 	public static void main(String[] args) {
+07: 		List<Integer> ilist=new ArrayList<>();
+08: 		int s=0;
+09: 		for (int i = 1; i <= 10; i++) {
+10: 			ilist.add(i);
+11: 		}
+12: 		for(int m: ilist){
+13: 			if(m%2==1){
+14: 				s+= m*m;
+15: 				System.out.printf("%d\t", m*m);
+16: 			}
+17: 		}
+18: 		System.out.println();
+19: 		System.out.println("1~10사이의 홀수에 대한 제곱합: "+s);
+20: 	}
+21: }

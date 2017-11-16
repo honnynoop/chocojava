@@ -1,0 +1,18 @@
+01: package kr.co.infopub.chapter.s040;
+02: // s=s+a 
+03: public class ForCondition {
+04: 	public static void main(String[] args) {
+05: 		int s=0;
+06: 		for (int i = 1; i <= 100; i++) {
+07: 			s+=i;
+08: 		}
+09: 		System.out.println("1~100의 합: "+s);
+10: 		s=0;                 // 0으로 초기화
+11: 		for (int i = 1; i <= 100; i++) {
+12: 			if(i%2==1){
+13: 				s+=i;
+14: 			}
+15: 		}
+16: 		System.out.println("1~100사이의 홀수의 합: "+s);
+17: 	}
+18: }

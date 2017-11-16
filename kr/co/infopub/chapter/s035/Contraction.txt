@@ -1,0 +1,17 @@
+01: package kr.co.infopub.chapter.s035;
+02: // 축약 연산자 
+03: public class Contraction {
+04: 	public static int sumEach(int n){
+05: 		int tot=0;
+06: 		while(n!=0){
+07: 			tot+=n%10; // 3 -> 2-> 1
+08: 			n/=10;     // 123-> 12-> 1->0
+09: 		}
+10: 		return tot;
+11: 	}
+12: 	public static void main(String[] args) {
+13: 		int number=1234567;
+14: 		int value=sumEach(number);
+15: 		System.out.printf("%d에 대한 각자리의 수 합: %d",number,value);
+16: 	}
+17: }

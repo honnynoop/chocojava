@@ -1,0 +1,15 @@
+01: package kr.co.infopub.chapter.s025;
+02: // 상수 묶음 클래스- enum
+03: public enum PEI{
+04: 	PHYSICAL(23), EMOTIONAL(28), INTELLECTUAL(33);
+05: 	private final int peiValue;
+06: 	PEI(int pie){
+07: 		this.peiValue=pie;
+08: 	}
+09: 	public int getPei(){
+10: 		return peiValue;
+11: 	}
+12: }
+13: enum FRUIT{
+14: 	APPLE, BANANA, MANGO
+15: }

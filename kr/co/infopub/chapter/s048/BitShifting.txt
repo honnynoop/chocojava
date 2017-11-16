@@ -1,0 +1,28 @@
+01: package kr.co.infopub.chapter.s048;
+02: public class BitShifting {
+03: 	public static final int BITMASK=1;	
+04: 	public  String makeBit(int value){
+05: 		//char배열을 String으로 만들기 위해 
+06: 		char[] val=new char[32];
+07: 		for(int i=31;i>=0;i--){
+08: 			if((value & BITMASK) ==1){
+09: 				val[i]='1';    //  1&1 일때만 1 그외 0
+10: 			}else{
+11: 				val[i]='0';	   //  1&1 일때만 1 그외 0
+12: 			}
+13: 			value >>>=1;  //value=value>>>1; 부호무시 오른쪽 이동
+14: 		}
+15: 		return new String(val);//char배열을 String으로
+16: 	}
+17: 	public static void main(String[] args) {
+18: 		int ival=2345;
+19: 		int eval=-2345;
+20: 		BitShifting bitsh=new  BitShifting();
+21: 		String vals=bitsh.makeBit(ival);
+22: 		System.out.println(vals);
+23: 		vals=bitsh.makeBit(eval);
+24: 		System.out.println(vals);
+25: 		char[] vs=vals.toCharArray();
+26: 		System.out.println(vs[0]);
+27: 	}
+28: }

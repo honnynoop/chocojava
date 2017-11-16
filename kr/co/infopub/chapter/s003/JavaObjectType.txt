@@ -1,0 +1,19 @@
+01: package kr.co.infopub.chapter.s003;
+02: import java.util.Calendar;        // Calendar는 java.util에 있다.
+03: import java.util.Date;            // Date는 java.util에 있다.
+04: // 참조타입
+05: public class JavaObjectType {
+06: 	public static void main(String[] args) {
+07: 		// 기본타입의 배열은 참조타입
+08: 		int [] m={1,2,3};            // 배열
+09: 		int [] n=new int[] {1,2,3} ; // 배열
+10: 		// 참조타입 - 객체타입
+11: 		String card="H8";            // 문자열
+12: 		Date d=new Date();           // 오늘
+13: 		Calendar cal=Calendar.getInstance();  //오늘
+14: 		//자동으로 toString()이 붙음
+15: 		System.out.println(card);    // card.toString()
+16: 		System.out.println(d);       // d.toString()
+17: 		System.out.println(cal);     // cal.toString()
+18: 	}
+19: }

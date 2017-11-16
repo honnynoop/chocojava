@@ -1,0 +1,14 @@
+01: package kr.co.infopub.chapter.s018;
+02: // 상수의 묶음
+03: public class FruitMain {
+04: 	public static void main(String[] args) {
+05: 		FRUIT pear=FRUIT.APPLE;
+06: 		FRUIT pear2=FRUIT.MANGO;
+07: 		System.out.println(pear);
+08: 		System.out.println(pear.name());
+09: 		System.out.println(pear.ordinal());  // 선언될 때 순서 0
+10: 		System.out.println(pear2.ordinal()); // 선언될 때 순서 2
+11: 		FRUIT [] fruits=FRUIT.values();
+12: 		System.out.println(fruits[0]);
+13: 	}
+14: }
